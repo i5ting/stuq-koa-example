@@ -1,0 +1,28 @@
+{
+  "name": "koa-middleware-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ava": "^0.15.2",
+    "co": "^4.6.0",
+    "debug": "^2.2.0",
+    "is-generator-function": "^1.0.3",
+    "koa-compose": "^3.1.0",
+    "koa-convert": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/koa-middleware-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/koa-middleware-code/issues"
+  },
+  "homepage": "https://github.com/i5ting/koa-middleware-code#readme"
+}

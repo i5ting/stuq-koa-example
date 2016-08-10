@@ -1,0 +1,21 @@
+{
+  "name": "koa-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.1.0",
+    "koa-multer": "^1.0.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.0.2",
+    "pug": "^2.0.0-beta5",
+    "raw-body": "^2.1.6"
+  }
+}

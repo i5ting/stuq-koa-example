@@ -1,0 +1,19 @@
+extends ../layouts/layout
+
+block content
+  h1 User Login
+  
+  form(action="/users/login", method="POST",role='form')
+    div(class="field")
+      label 用户名
+      br
+      input(type='text',name="name" ,value="sang")
+    div(class="field")
+      label 密码
+      br
+      input(type='text',name="password" ,value="000000")      
+    div(class="actions") 
+      input(type='submit',value='Submit')
+      
+
+  a(href='/') Back

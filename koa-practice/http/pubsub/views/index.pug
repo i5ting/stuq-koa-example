@@ -1,0 +1,43 @@
+extends layouts/layout
+
+block content
+  h1= title
+  p Welcome to StuQ Koa小班课！
+  div
+    a(href='/users/register') 注册 
+    span |
+    a(href='/users/login') 登录 
+    span |
+    a(href='/users/logout') 销毁
+  script(src="http://127.0.0.1:3000/faye/client.js")
+  script.
+    var client = new Faye.Client('http://127.0.0.1:3000/faye', {
+      timeout : 120,
+          retry       : 5
+      });
+
+      Logger = {
+        incoming: function(message, callback) {
+          console.log('incoming', message);
+          callback(message);
+        },
+        outgoing: function(message, callback) {
+          console.log('outgoing', message);
+          callback(message);
+        }
+      };
+
+      client.addExtension(Logger);
+
+      client.on('transport:down', function() {
+        // the client is offline
+      });
+
+      client.on('transport:up', function() {
+        // the client is online
+      });
+
+      var subscription = client.subscribe('/messages', function(message) {
+        // handle message
+          alert(message.text);
+      });

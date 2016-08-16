@@ -20,7 +20,6 @@ router.get('/register', ctx => {
 // 注册信息保存
 router.post('/register', ctx => {
   console.log(ctx.request.body)
-  var session = ctx.session
   let body = ctx.request.body
   
   let user = new User({
@@ -32,7 +31,7 @@ router.post('/register', ctx => {
     if (err) {
       return ctx.redirect('/404')
     } 
-    
+    var session = ctx.session
     session.current_user = {
       username: body.name,
       password: body.password

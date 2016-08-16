@@ -13,12 +13,12 @@ console.log(client)
 router.get('/', ctx => {
   var session = ctx.session;
   
-  setTimeout(function(){
+  setTimeout(function () {
     console.log('publish')
     client.publish('/messages', {
       text: 'Hello world'
     });
-  },3000)
+  }, 3000)
   
   
   if (session.current_user) {

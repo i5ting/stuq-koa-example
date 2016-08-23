@@ -1,0 +1,24 @@
+{
+  "name": "koa-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run crud && npm run extend && npm run hook && npm run virtual && npm run promisify",
+    "crud": "ava crud -v",
+    "extend": "ava -v extend/test.js",
+    "hook": "ava -v hook/test.js",
+    "virtual": "ava -v virtual",
+    "promisify": "ava -v promisify"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "bluebird": "^3.3.5",
+    "mongoose": "^4.4.14"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0"
+  }
+}

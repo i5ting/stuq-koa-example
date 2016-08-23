@@ -1,0 +1,95 @@
+2016-05-17T15:17:04.874+0800 I JOURNAL  [initandlisten] journal dir=tmp/db/journal
+2016-05-17T15:17:04.874+0800 I JOURNAL  [initandlisten] recover begin
+2016-05-17T15:17:04.874+0800 I JOURNAL  [initandlisten] recover lsn: 832437
+2016-05-17T15:17:04.874+0800 I JOURNAL  [initandlisten] recover tmp/db/journal/j._0
+2016-05-17T15:17:04.875+0800 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:832437
+2016-05-17T15:17:04.883+0800 I JOURNAL  [initandlisten] recover cleaning up
+2016-05-17T15:17:04.883+0800 I JOURNAL  [initandlisten] removeJournalFiles
+2016-05-17T15:17:04.884+0800 I JOURNAL  [initandlisten] recover done
+2016-05-17T15:17:04.897+0800 I JOURNAL  [durability] Durability thread started
+2016-05-17T15:17:04.897+0800 I JOURNAL  [journal writer] Journal writer thread started
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] MongoDB starting : pid=12022 port=27017 dbpath=tmp/db 64-bit host=sangalfreds-MacBook-Pro.local
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] db version v3.0.2
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] git version: 6201872043ecbbc0a4cc169b5482dcf385fc464f
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] build info: Darwin mci-osx108-10.build.10gen.cc 12.5.0 Darwin Kernel Version 12.5.0: Sun Sep 29 13:33:47 PDT 2013; root:xnu-2050.48.12~1/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] allocator: system
+2016-05-17T15:17:04.897+0800 I CONTROL  [initandlisten] options: { net: { bindIp: "127.0.0.1", port: 27017 }, processManagement: { pidFilePath: "tmp/pids/mongodb.pid" }, storage: { dbPath: "tmp/db" }, systemLog: { destination: "file", path: "tmp/logs/mongodb.log" } }
+2016-05-17T15:17:05.097+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-05-17T15:17:09.438+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51183 #1 (1 connection now open)
+2016-05-17T15:17:09.483+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51184 #2 (2 connections now open)
+2016-05-17T15:17:09.508+0800 I NETWORK  [conn2] end connection 127.0.0.1:51184 (1 connection now open)
+2016-05-17T15:17:09.509+0800 I NETWORK  [conn1] end connection 127.0.0.1:51183 (0 connections now open)
+2016-05-17T15:17:13.621+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51185 #3 (1 connection now open)
+2016-05-17T15:17:13.643+0800 I COMMAND  [conn3] dropDatabase db_helloworld starting
+2016-05-17T15:17:13.649+0800 I JOURNAL  [conn3] journalCleanup...
+2016-05-17T15:17:13.649+0800 I JOURNAL  [conn3] removeJournalFiles
+2016-05-17T15:17:13.651+0800 I JOURNAL  [conn3] journalCleanup...
+2016-05-17T15:17:13.651+0800 I JOURNAL  [conn3] removeJournalFiles
+2016-05-17T15:17:13.653+0800 I COMMAND  [conn3] dropDatabase db_helloworld finished
+2016-05-17T15:17:13.655+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51186 #4 (2 connections now open)
+2016-05-17T15:17:13.684+0800 I INDEX    [conn3] allocating new ns file tmp/db/db_helloworld.ns, filling with zeroes...
+2016-05-17T15:17:13.695+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51187 #5 (3 connections now open)
+2016-05-17T15:17:13.698+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51188 #6 (4 connections now open)
+2016-05-17T15:17:13.702+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51189 #7 (5 connections now open)
+2016-05-17T15:17:13.744+0800 I STORAGE  [FileAllocator] allocating new datafile tmp/db/db_helloworld.0, filling with zeroes...
+2016-05-17T15:17:13.744+0800 I STORAGE  [FileAllocator] creating directory tmp/db/_tmp
+2016-05-17T15:17:13.853+0800 I STORAGE  [FileAllocator] done allocating datafile tmp/db/db_helloworld.0, size: 64MB,  took 0.109 secs
+2016-05-17T15:17:13.879+0800 I WRITE    [conn3] insert db_helloworld.users query: { username: "i5ting", password: "0123456789", _id: ObjectId('573ac57922e46d232fd4a440'), __v: 0 } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 86 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 195ms
+2016-05-17T15:17:13.879+0800 I COMMAND  [conn3] command db_helloworld.$cmd command: insert { insert: "users", documents: [ { username: "i5ting", password: "0123456789", _id: ObjectId('573ac57922e46d232fd4a440'), __v: 0 } ], ordered: false, writeConcern: { w: 1 } } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 2 } }, MMAPV1Journal: { acquireCount: { w: 8 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 86 } }, Database: { acquireCount: { w: 1, W: 1 } }, Collection: { acquireCount: { W: 1 } }, Metadata: { acquireCount: { W: 4 } } } 195ms
+2016-05-17T15:17:13.879+0800 I WRITE    [conn5] insert db_helloworld.users query: { username: "i5ting for findById", password: "01234567891", _id: ObjectId('573ac57922e46d232fd4a441'), __v: 0 } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 4 } }, Database: { acquireCount: { w: 1 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 180372 } }, Collection: { acquireCount: { W: 1 }, acquireWaitCount: { W: 1 }, timeAcquiringMicros: { W: 43 } } } 180ms
+2016-05-17T15:17:13.879+0800 I NETWORK  [conn3] end connection 127.0.0.1:51185 (4 connections now open)
+2016-05-17T15:17:13.879+0800 I NETWORK  [conn4] end connection 127.0.0.1:51186 (4 connections now open)
+2016-05-17T15:17:13.879+0800 I COMMAND  [conn5] command db_helloworld.$cmd command: insert { insert: "users", documents: [ { username: "i5ting for findById", password: "01234567891", _id: ObjectId('573ac57922e46d232fd4a441'), __v: 0 } ], ordered: false, writeConcern: { w: 1 } } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 4 } }, Database: { acquireCount: { w: 1 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 180372 } }, Collection: { acquireCount: { W: 1 }, acquireWaitCount: { W: 1 }, timeAcquiringMicros: { W: 43 } } } 180ms
+2016-05-17T15:17:13.879+0800 I NETWORK  [conn5] end connection 127.0.0.1:51187 (2 connections now open)
+2016-05-17T15:17:13.879+0800 I NETWORK  [conn6] end connection 127.0.0.1:51188 (2 connections now open)
+2016-05-17T15:17:13.879+0800 I WRITE    [conn7] insert db_helloworld.users query: { username: "i5ting for delete", password: "0123456789", _id: ObjectId('573ac57922e46d232fd4a442'), __v: 0 } ninserted:1 keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 4 } }, Database: { acquireCount: { w: 1 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 176125 } }, Collection: { acquireCount: { W: 1 }, acquireWaitCount: { W: 1 }, timeAcquiringMicros: { W: 209 } } } 176ms
+2016-05-17T15:17:13.879+0800 I COMMAND  [conn7] command db_helloworld.$cmd command: insert { insert: "users", documents: [ { username: "i5ting for delete", password: "0123456789", _id: ObjectId('573ac57922e46d232fd4a442'), __v: 0 } ], ordered: false, writeConcern: { w: 1 } } keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { w: 1 } }, MMAPV1Journal: { acquireCount: { w: 4 } }, Database: { acquireCount: { w: 1 }, acquireWaitCount: { w: 1 }, timeAcquiringMicros: { w: 176125 } }, Collection: { acquireCount: { W: 1 }, acquireWaitCount: { W: 1 }, timeAcquiringMicros: { W: 209 } } } 176ms
+2016-05-17T15:17:13.879+0800 I NETWORK  [conn7] end connection 127.0.0.1:51189 (0 connections now open)
+2016-05-17T15:17:15.290+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51190 #8 (1 connection now open)
+2016-05-17T15:17:15.315+0800 I INDEX    [conn8] build index on: db_helloworld.users properties: { v: 1, unique: true, key: { openid: 1 }, name: "openid_1", ns: "db_helloworld.users", background: true }
+2016-05-17T15:17:15.340+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51191 #9 (2 connections now open)
+2016-05-17T15:17:15.343+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51192 #10 (3 connections now open)
+2016-05-17T15:17:15.374+0800 I NETWORK  [conn10] end connection 127.0.0.1:51192 (2 connections now open)
+2016-05-17T15:17:15.374+0800 I NETWORK  [conn9] end connection 127.0.0.1:51191 (2 connections now open)
+2016-05-17T15:17:15.374+0800 I NETWORK  [conn8] end connection 127.0.0.1:51190 (1 connection now open)
+2016-05-17T15:17:16.842+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51193 #11 (1 connection now open)
+2016-05-17T15:17:16.989+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51194 #12 (2 connections now open)
+2016-05-17T15:17:17.005+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51195 #13 (3 connections now open)
+2016-05-17T15:17:17.112+0800 I NETWORK  [conn13] end connection 127.0.0.1:51195 (2 connections now open)
+2016-05-17T15:17:17.112+0800 I NETWORK  [conn12] end connection 127.0.0.1:51194 (2 connections now open)
+2016-05-17T15:17:17.112+0800 I NETWORK  [conn11] end connection 127.0.0.1:51193 (2 connections now open)
+2016-05-17T15:17:18.640+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51196 #14 (1 connection now open)
+2016-05-17T15:17:18.657+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51197 #15 (2 connections now open)
+2016-05-17T15:17:18.703+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51198 #16 (3 connections now open)
+2016-05-17T15:17:18.716+0800 I NETWORK  [conn14] end connection 127.0.0.1:51196 (2 connections now open)
+2016-05-17T15:17:18.726+0800 I NETWORK  [conn16] end connection 127.0.0.1:51198 (1 connection now open)
+2016-05-17T15:17:18.726+0800 I NETWORK  [conn15] end connection 127.0.0.1:51197 (1 connection now open)
+2016-05-17T15:17:20.230+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51199 #17 (1 connection now open)
+2016-05-17T15:17:20.286+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51200 #18 (2 connections now open)
+2016-05-17T15:17:20.317+0800 I NETWORK  [conn17] end connection 127.0.0.1:51199 (1 connection now open)
+2016-05-17T15:17:20.317+0800 I NETWORK  [conn18] end connection 127.0.0.1:51200 (1 connection now open)
+2016-05-18T06:36:10.755+0800 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 140ms
+2016-05-18T09:21:47.486+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53774 #19 (1 connection now open)
+2016-05-18T09:21:47.525+0800 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53775 #20 (2 connections now open)
+2016-05-19T06:44:32.350+0800 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 76ms
+2016-05-19T20:34:09.129+0800 I NETWORK  [conn20] end connection 127.0.0.1:53775 (1 connection now open)
+2016-05-19T20:34:09.129+0800 I NETWORK  [conn19] end connection 127.0.0.1:53774 (1 connection now open)
+2016-05-20T07:43:41.212+0800 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2016-05-20T07:43:41.216+0800 I CONTROL  [signalProcessingThread] now exiting
+2016-05-20T07:43:41.216+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2016-05-20T07:43:41.216+0800 I NETWORK  [signalProcessingThread] closing listening socket: 6
+2016-05-20T07:43:41.216+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2016-05-20T07:43:41.217+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2016-05-20T07:43:41.222+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2016-05-20T07:43:41.222+0800 I NETWORK  [signalProcessingThread] shutdown: going to close sockets...
+2016-05-20T07:43:41.222+0800 I STORAGE  [signalProcessingThread] shutdown: waiting for fs preallocator...
+2016-05-20T07:43:41.223+0800 I STORAGE  [signalProcessingThread] shutdown: final commit...
+2016-05-20T07:43:41.226+0800 I JOURNAL  [signalProcessingThread] journalCleanup...
+2016-05-20T07:43:41.226+0800 I JOURNAL  [signalProcessingThread] removeJournalFiles
+2016-05-20T07:43:41.238+0800 I JOURNAL  [signalProcessingThread] Terminating durability thread ...
+2016-05-20T07:43:41.336+0800 I JOURNAL  [journal writer] Journal writer thread stopped
+2016-05-20T07:43:41.336+0800 I JOURNAL  [durability] Durability thread stopped
+2016-05-20T07:43:41.337+0800 I STORAGE  [signalProcessingThread] shutdown: closing all files...
+2016-05-20T07:43:41.338+0800 I STORAGE  [signalProcessingThread] closeAllFiles() finished
+2016-05-20T07:43:41.338+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2016-05-20T07:43:41.339+0800 I CONTROL  [signalProcessingThread] dbexit:  rc: 0
